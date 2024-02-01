@@ -7,10 +7,10 @@ use App\Lib\VATNumber\Exception\InvalidVATNumberException;
 final class VATNumber
 {
     private array $numbers = [
-        '/DE[0-9]{9}/' => 0.19,
-        '/IT[0-9]{11}/' => 0.22,
-        '/GR[0-9]{9}/' => 0.24,
-        '/FR[A-Z]{2}[0-9]{9}/' => 0.20
+        '/^DE[0-9]{9}$/' => 0.19,
+        '/^IT[0-9]{11}$/' => 0.22,
+        '/^GR[0-9]{9}$/' => 0.24,
+        '/^FR[A-Z]{2}[0-9]{9}$/' => 0.20
     ];
 
     private float $tax;
@@ -18,7 +18,7 @@ final class VATNumber
     public function __construct(private readonly string $number)
     {
         foreach ($this->numbers as $format => $tax) {
-            if (preg_match($format, $number) !== false) {
+            if (preg_match($format, $number) === 1) {
                 $this->tax = $tax;
                 return;
             }
