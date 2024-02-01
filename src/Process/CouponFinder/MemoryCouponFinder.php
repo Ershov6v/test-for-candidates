@@ -14,7 +14,7 @@ class MemoryCouponFinder implements CouponFinderInterface
     public function __construct()
     {
         $this->coupons['CF001'] = new Coupon('CF001', CouponType::Percent, 0.2);
-        $this->coupons['CS002'] = new Coupon('CS002', CouponType::Percent, 0.6);
+        $this->coupons['CS002'] = new Coupon('CS002', CouponType::Percent, 0.06);
         $this->coupons['CT003'] = new Coupon('CT003', CouponType::Fixed, 10);
     }
 
