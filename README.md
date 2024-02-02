@@ -14,7 +14,7 @@
 >docker run -p:8866:8000 --rm test_from_viktor
 
 Примеры запроса данных:
->curl -d '{"product":"1", "taxNumber":"GR123456789", "couponCode":"CS002"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:8866/calculate-price \
+>curl -d '{"product":"1", "taxNumber":"GR123456789", "couponCode":"CS002"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:8866/calculate-price
 
 >curl -d '{"product":"1", "taxNumber":"GR123456789"}' -H "Content-Type: application/json" -X POST http://127.0.0.1:8866/calculate-price
 
