@@ -73,7 +73,6 @@ class IndexController extends AbstractController
         $data = $data + [
                 'product' => null,
                 'taxNumber' => null,
-                'couponCode' => null,
                 'paymentProcessor' => null
             ];
 
